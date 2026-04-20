@@ -1,0 +1,214 @@
+{
+  "main": {
+    "id": "b3545c516962dd6d",
+    "type": "split",
+    "children": [
+      {
+        "id": "ca83ec4c5daa0efe",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2b5945fe1fefb8a5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "docx-to-obsidian-conversion.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "docx-to-obsidian-conversion"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c90648a442e8e586",
+    "type": "split",
+    "children": [
+      {
+        "id": "6e2bce1ecff140f2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "aeb3724120a4f7e0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "5b6ab7beafce77ec",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "1cb05a8ba557eba6",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "a59a0d58a6b329e1",
+    "type": "split",
+    "children": [
+      {
+        "id": "5e35b7b4f51119bf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c1fdc7c199d924b6",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "docx-to-obsidian-conversion.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for docx-to-obsidian-conversion"
+            }
+          },
+          {
+            "id": "7542ebe9a31958ef",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "docx-to-obsidian-conversion.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from docx-to-obsidian-conversion"
+            }
+          },
+          {
+            "id": "758ce9bc9aaa15d8",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "0db7a7eb4db7798b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "5885609aadb48195",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "docx-to-obsidian-conversion.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of docx-to-obsidian-conversion"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "2b5945fe1fefb8a5",
+  "lastOpenFiles": [
+    "Law-Assessments/Property Law/Landgate Form T1.pdf",
+    "Law-Assessments/Property Law/Landgate Form C1.pdf",
+    "Law-Assessments/Property Law/Landgate Form C1.md",
+    "Law-Assessments/Property Law/Property Law 1 Lecture 8 2026 v2.md",
+    "Law-Assessments/Property Law/Property Law 1 Lecture 7 2026 v2.md",
+    "Law-Assessments/Property Law/Property Law 1 Lecture 6 2026 v2.md",
+    "Law-Assessments/Property Law/Assignment2_project_plan.md",
+    "Law-Assessments/Property Law/Assignment2_draft.md",
+    "Law-Assessments/Property Law/ASSIGNMENT 2 PROPERTY LAW 1 2026 LAW2102.md",
+    "Law-Assessments/Property Law/ASSIGNMENT 2 PROPERTY LAW 1 2026 LAW2102.pdf",
+    "Law-Assessments/Property Law/bibliography.md",
+    "Law-Assessments/Corporate Law/questions/Arka_v_Meridian/Week 5 - Directors Duties_Care and Diligence-v2.md",
+    "Law-Assessments/Property Law/letter_of_demand.md",
+    "Law-Assessments/Corporate Law/questions/Arka_v_Meridian/Module 3 Constitution and Replaceable Rules (1)(1).md",
+    "Law-Assessments/Property Law/caveat_draft.md",
+    "Law-Assessments/Corporate Law/questions/Arka_v_Meridian/Major_Assessment.md",
+    "Law-Assessments/Corporate Law/questions/Arka_v_Meridian/Arka_v_Meridian_Memo_Draft.md",
+    "Law-Assessments/Corporate Law/Major_Assessment.md",
+    "Law-Assessments/Administration Law/Lecture 8 Admin law 2026.md",
+    "Law-Assessments/Administration Law/Lecture 7 Admin Law 2026.md",
+    "Law-Assessments/Administration Law/Lecture 6 Admin Law 2026.md",
+    "Law-Assessments/Property Law/transfer_T1_filled.md",
+    "Law-Assessments/Administration Law/Group_Assignment.md",
+    "Law-Assessments/Administration Law/questions/Q1_Decision_Jurisdiction_and_Standing_Draft.md",
+    "Law-Assessments/Property Law/offer_and_acceptance_filled.md"
+  ]
+}
