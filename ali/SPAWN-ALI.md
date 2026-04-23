@@ -1,0 +1,40 @@
+# Spawn Ali Quickly
+
+This is the fastest path for creating a new Ali node from a vanilla Hermes installation.
+
+## File
+
+- `ali/spawn-ali.sh`
+
+This single file embeds:
+- current baseline Hermes config
+- current local bootstrap secrets
+- the Ali operating skill
+- the Ali architecture doc
+- the new-node prompt
+
+## Use
+
+1. Install Hermes on the new machine.
+2. Copy `ali/spawn-ali.sh` to the new machine by a secure method.
+3. Run:
+
+```bash
+bash spawn-ali.sh
+```
+
+4. Start Ali:
+
+```bash
+hermes --profile ali-$(hostname -s) -s ali-operating-model
+```
+
+5. Paste the contents of:
+
+```text
+~/hermes-workspace/ali/NEW-NODE-PROMPT.md
+```
+
+## Security
+
+`spawn-ali.sh` contains embedded credentials and should be treated like a secret. Do not commit it. Do not send it through insecure channels.

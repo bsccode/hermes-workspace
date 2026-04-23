@@ -1,0 +1,6 @@
+.DS_Store
+ali/bootstrap/*.local.env
+ali/bootstrap/config.current.yaml
+ali/bootstrap/*.secrets*
+ali/bootstrap/*.private.*
+ali/spawn-ali.sh
