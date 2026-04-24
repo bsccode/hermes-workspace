@@ -34,7 +34,7 @@ After running the bootstrap, the target machine will have:
 4. Start Ali on that machine:
 
    ```bash
-   hermes --profile ali-$(hostname -s) -s ali-operating-model
+   hermes --profile ali-$(hostname -s | tr '[:upper:]' '[:lower:]') -s ali-operating-model
    ```
 
 5. Feed the contents of `NEW-NODE-PROMPT.md` into the first session.

@@ -26,7 +26,7 @@ bash spawn-ali.sh
 4. Start Ali:
 
 ```bash
-hermes --profile ali-$(hostname -s) -s ali-operating-model
+hermes --profile ali-$(hostname -s | tr '[:upper:]' '[:lower:]') -s ali-operating-model
 ```
 
 5. Paste the contents of:

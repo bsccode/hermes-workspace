@@ -9,7 +9,8 @@ set -euo pipefail
 #   ALI_NODE_NAME=my-node ALI_PROFILE_NAME=ali-my-node bash spawn-ali.sh
 #   ALI_WORKSPACE_DIR=$HOME/hermes-workspace bash spawn-ali.sh
 
-NODE_NAME="${ALI_NODE_NAME:-$(hostname -s)}"
+RAW_NODE_NAME="${ALI_NODE_NAME:-$(hostname -s)}"
+NODE_NAME="$(printf '%s' "$RAW_NODE_NAME" | tr '[:upper:]' '[:lower:]' | tr -c 'a-z0-9_-' '-')"
 PROFILE_NAME="${ALI_PROFILE_NAME:-ali-$NODE_NAME}"
 WORKSPACE_DIR="${ALI_WORKSPACE_DIR:-$HOME/hermes-workspace}"
 HERMES_HOME_BASE="${HERMES_HOME_BASE:-$HOME/.hermes}"

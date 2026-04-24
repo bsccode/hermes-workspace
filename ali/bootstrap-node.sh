@@ -23,7 +23,8 @@ fi
 
 source "$SECRETS_FILE"
 
-NODE_NAME="${ALI_NODE_NAME:-$(hostname -s)}"
+RAW_NODE_NAME="${ALI_NODE_NAME:-$(hostname -s)}"
+NODE_NAME="$(printf '%s' "$RAW_NODE_NAME" | tr '[:upper:]' '[:lower:]' | tr -c 'a-z0-9_-' '-')"
 PROFILE_NAME="${ALI_PROFILE_NAME:-ali-$NODE_NAME}"
 HERMES_HOME_BASE="${HERMES_HOME_BASE:-$HOME/.hermes}"
 PROFILE_DIR="$HERMES_HOME_BASE/profiles/$PROFILE_NAME"
