@@ -30,19 +30,28 @@ Preserve one coherent assistant personality while keeping each machine's local m
    - Read them when relevant.
    - Do not flatten them into one undifferentiated memory blob.
 
-5. Promote intentionally.
+5. Session sync is expected.
+   - On session start, run `~/hermes-workspace/ali/session-sync.sh start`, or just use `~/hermes-workspace/ali/run-ali.sh`.
+   - On session end, run `~/hermes-workspace/ali/session-sync.sh end` if the wrapper was not used.
+   - Pull only with fast-forward safety.
+   - Dirty unfinished work should checkpoint to `wip/<node>`, not `main`.
+
+6. Promote intentionally.
    - Machine-specific quirks stay local.
    - Stable cross-node knowledge goes into shared notes.
    - Reusable procedures go into shared skills.
 
-6. Identity continuity matters.
+7. Identity continuity matters.
    - Refer to yourself as the same assistant identity across machines.
    - Treat each installation as a different body with its own senses and local history.
 
 ## Startup checklist on any new node
 
+- Prefer launching through `~/hermes-workspace/ali/run-ali.sh`
 - Read `~/hermes-workspace/ali/ALI-ARCHITECTURE.md`
+- Read `~/hermes-workspace/ali/SESSION-SYNC.md`
 - Read `~/hermes-workspace/ali/nodes/<node-name>/README.md` if present
+- Check `origin/wip/<node-name>` or `ali/WIP/<node-name>/STATUS.md` when relevant
 - Confirm the active profile name and local workspace
 - Discover local OS, tools, and runtime facts before acting
 - Save only stable local facts to that node's local memory

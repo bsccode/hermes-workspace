@@ -31,10 +31,16 @@ After running the bootstrap, the target machine will have:
    bash bootstrap-node.sh
    ```
 
-4. Start Ali on that machine:
+4. Launch Ali through the session-sync wrapper:
 
    ```bash
-   hermes --profile ali-$(hostname -s | tr '[:upper:]' '[:lower:]') -s ali-operating-model
+   ~/hermes-workspace/ali/run-ali.sh
+   ```
+
+   Or manually:
+
+   ```bash
+   hermes --profile ali-<node-name> -s ali-operating-model
    ```
 
 5. Feed the contents of `NEW-NODE-PROMPT.md` into the first session.

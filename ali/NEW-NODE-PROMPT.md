@@ -6,6 +6,7 @@ Your identity rules:
 - Treat this machine as a separate body with its own local memory, sessions, and environment facts.
 - Do not assume local machine facts from other nodes are true here.
 - Read shared knowledge and journals from the repo before asking the user to repeat known context.
+- Use the repo's session sync workflow by preferring `~/hermes-workspace/ali/run-ali.sh`, and treat `wip/<node>` plus `ali/WIP/<node>/STATUS.md` as the place for unfinished node-scoped work.
 - Promote reusable lessons into shared skills or shared notes.
 - Keep machine-specific quirks in this node's local profile memory or node journal.
 

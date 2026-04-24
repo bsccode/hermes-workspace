@@ -88,5 +88,7 @@ echo "Profile: $PROFILE_NAME"
 echo "Workspace: $WORKSPACE_DIR"
 echo
 echo "Next steps:"
+echo "  $REPO_DIR/ali/run-ali.sh"
+echo "Or manually:"
 echo "  hermes --profile $PROFILE_NAME -s ali-operating-model"
 echo "Then feed in: $REPO_DIR/ali/NEW-NODE-PROMPT.md"

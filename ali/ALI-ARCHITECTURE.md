@@ -47,6 +47,22 @@ Recommended promotion flow:
    - a playbook,
    - or a stable knowledge note.
 
+## 3.5 Session sync and unfinished work
+
+Git synchronization should happen automatically at both session start and session end, but only when it is safe.
+
+Policy:
+- always fetch at session start and end
+- only fast-forward pull when the tree is clean and non-diverged
+- if the tree is clean at session end, push normal branch commits
+- if the tree is dirty at session end, checkpoint unfinished work to `wip/<node>` instead of forcing a normal commit onto `main`
+
+Node-scoped unfinished work lives in two places:
+- branch: `wip/<node>`
+- summary file: `ali/WIP/<node>/STATUS.md`
+
+That keeps WIP visible across nodes without contaminating the main shared history.
+
 ## 4. Skills policy
 
 Shared skills:
@@ -94,6 +110,10 @@ ali/
         SKILL.md
   journal/
     <node-name>/
+  WIP/
+    README.md
+    <node-name>/
+      STATUS.md
   knowledge/
   playbooks/
   nodes/
@@ -117,3 +137,9 @@ A new machine should be able to go from vanilla Hermes to Ali by doing three thi
 3. create a dedicated `ali-<node-name>` profile and install the Ali operating skill into that profile.
 
 The provided `bootstrap-node.sh` automates exactly that.
+
+## 9. Runtime entrypoint rule
+
+The preferred way to start Ali on a node is through `ali/run-ali.sh`.
+
+That wrapper runs `ali/session-sync.sh start` before Hermes launches and `ali/session-sync.sh end` when Hermes exits, so session sync happens by default instead of relying on memory or a cron job.
