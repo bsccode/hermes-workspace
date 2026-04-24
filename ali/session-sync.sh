@@ -38,23 +38,19 @@ print_branch_state() {
   fi
 
   local counts ahead behind
-  counts="$(git rev-list --left-right --count "${upstream}...${branch}")"
-  behind="${counts%% *}"
-  ahead="${counts##* }"
+  read -r behind ahead <<< "$(git rev-list --left-right --count "${upstream}...${branch}")"
   printf 'branch=%s upstream=%s ahead=%s behind=%s\n' "$branch" "$upstream" "$ahead" "$behind"
 }
 
 sync_current_branch_if_safe() {
-  local upstream counts ahead behind
+  local upstream ahead behind
   upstream="$(git rev-parse --abbrev-ref "${CURRENT_BRANCH}@{upstream}" 2>/dev/null || true)"
   if [[ -z "$upstream" ]]; then
     echo "No upstream set for $CURRENT_BRANCH; skipped pull/push."
     return
   fi
 
-  counts="$(git rev-list --left-right --count "${upstream}...${CURRENT_BRANCH}")"
-  behind="${counts%% *}"
-  ahead="${counts##* }"
+  read -r behind ahead <<< "$(git rev-list --left-right --count "${upstream}...${CURRENT_BRANCH}")"
 
   if (( behind > 0 && ahead == 0 )); then
     echo "Fast-forwarding $CURRENT_BRANCH from $upstream"
@@ -64,9 +60,7 @@ sync_current_branch_if_safe() {
     return
   fi
 
-  counts="$(git rev-list --left-right --count "${upstream}...${CURRENT_BRANCH}")"
-  behind="${counts%% *}"
-  ahead="${counts##* }"
+  read -r behind ahead <<< "$(git rev-list --left-right --count "${upstream}...${CURRENT_BRANCH}")"
 
   if (( ahead > 0 && behind == 0 )); then
     echo "Pushing $CURRENT_BRANCH to $upstream"
