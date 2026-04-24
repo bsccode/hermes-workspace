@@ -10,6 +10,7 @@ Files here:
 - `bootstrap-node.sh` — automation script that provisions a new node profile.
 - `run-ali.sh` — wrapper that runs safe start/end sync around Hermes itself.
 - `session-sync.sh` — start/end/status/clear sync helper for git + WIP handling.
+- `agent-hooks/` — Hermes shell-hook scripts that bake session sync into normal Hermes startup/exit.
 - `shared/skills/ali-operating-model/SKILL.md` — the shared Ali identity/operating skill.
 - `bootstrap/ali-secrets.local.env` — local-only secrets bundle for onboarding a new node. This file is gitignored.
 - `bootstrap/config.current.yaml` — current Hermes baseline config snapshot for cloning into a new node profile. This file is gitignored.

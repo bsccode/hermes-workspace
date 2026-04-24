@@ -11,6 +11,7 @@ After running the bootstrap, the target machine will have:
 - git credentials configured for GitHub access
 - the shared workspace repo cloned or updated
 - the `ali-operating-model` skill installed into that node profile
+- baked-in Hermes session-sync shell hooks installed under `~/.hermes/agent-hooks/`
 - a node-specific journal and node README scaffold inside the repo
 
 ## Files used by the bootstrap
@@ -18,6 +19,7 @@ After running the bootstrap, the target machine will have:
 - `ali/bootstrap/ali-secrets.local.env`
 - `ali/bootstrap/config.current.yaml`
 - `ali/shared/skills/ali-operating-model/SKILL.md`
+- `ali/agent-hooks/`
 - `ali/bootstrap-node.sh`
 
 ## Fast path on a new machine

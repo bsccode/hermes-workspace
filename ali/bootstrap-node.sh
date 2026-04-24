@@ -5,6 +5,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SECRETS_FILE="${ALI_SECRETS_FILE:-$SCRIPT_DIR/bootstrap/ali-secrets.local.env}"
 CONFIG_SNAPSHOT="${ALI_CONFIG_SNAPSHOT:-$SCRIPT_DIR/bootstrap/config.current.yaml}"
 SHARED_SKILL_SRC="$SCRIPT_DIR/shared/skills/ali-operating-model/SKILL.md"
+HOOKS_SRC_DIR="$SCRIPT_DIR/agent-hooks"
+HOOKS_DEST_DIR="$HOME/.hermes/agent-hooks"
 
 if [[ ! -f "$SECRETS_FILE" ]]; then
   echo "Missing secrets file: $SECRETS_FILE" >&2
@@ -18,6 +20,11 @@ fi
 
 if [[ ! -f "$SHARED_SKILL_SRC" ]]; then
   echo "Missing shared skill file: $SHARED_SKILL_SRC" >&2
+  exit 1
+fi
+
+if [[ ! -d "$HOOKS_SRC_DIR" ]]; then
+  echo "Missing hook templates directory: $HOOKS_SRC_DIR" >&2
   exit 1
 fi
 
@@ -64,6 +71,10 @@ git -C "$REPO_DIR" pull --ff-only origin "$ALI_BRANCH" || true
 cp "$CONFIG_SNAPSHOT" "$PROFILE_DIR/config.yaml"
 cp "$SECRETS_FILE" "$PROFILE_DIR/.env"
 cp "$SHARED_SKILL_SRC" "$PROFILE_SKILL_DIR/SKILL.md"
+mkdir -p "$HOOKS_DEST_DIR"
+cp "$HOOKS_SRC_DIR/ali-session-start.sh" "$HOOKS_DEST_DIR/ali-session-start.sh"
+cp "$HOOKS_SRC_DIR/ali-session-finalize.sh" "$HOOKS_DEST_DIR/ali-session-finalize.sh"
+chmod +x "$HOOKS_DEST_DIR/ali-session-start.sh" "$HOOKS_DEST_DIR/ali-session-finalize.sh"
 
 mkdir -p \
   "$REPO_DIR/ali/journal/$NODE_NAME" \

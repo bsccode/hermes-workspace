@@ -311,8 +311,14 @@ command_allowlist:
 - shell command via -c/-lc flag
 - script execution via -e/-c flag
 quick_commands: {}
-hooks: {}
-hooks_auto_accept: false
+hooks:
+  on_session_start:
+  - command: ~/.hermes/agent-hooks/ali-session-start.sh
+    timeout: 60
+  on_session_finalize:
+  - command: ~/.hermes/agent-hooks/ali-session-finalize.sh
+    timeout: 120
+hooks_auto_accept: true
 personalities: {}
 security:
   redact_secrets: true
