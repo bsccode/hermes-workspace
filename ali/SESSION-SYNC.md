@@ -28,12 +28,17 @@ This keeps everyone updated where it is safe to do so:
 
 - `ali/session-sync.sh` — implements `start`, `end`, `status`, and `clear`
 - `ali/run-ali.sh` — wrapper that runs sync at session start and end around Hermes itself
+- `~/.hermes/agent-hooks/ali-session-start.sh` — Hermes shell hook that triggers start sync on the first turn of a session
+- `~/.hermes/agent-hooks/ali-session-finalize.sh` — Hermes shell hook that triggers end sync when the CLI tears down the session
+- `~/.hermes/config.yaml` `hooks:` block — baked-in registration point for the shell hooks
 - `ali/WIP/<node>/STATUS.md` — latest node-scoped WIP summary, committed on the WIP branch
 - `wip/<node>` — remote branch holding the current checkpoint for unfinished work on that node
 
 ## Recommended use
 
-Start Ali through:
+The sync is now baked into Hermes via shell hooks in `~/.hermes/config.yaml`, so normal `hermes` sessions trigger it automatically.
+
+You can still start Ali explicitly through:
 
 ```bash
 ~/hermes-workspace/ali/run-ali.sh

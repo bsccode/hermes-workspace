@@ -140,6 +140,8 @@ The provided `bootstrap-node.sh` automates exactly that.
 
 ## 9. Runtime entrypoint rule
 
-The preferred way to start Ali on a node is through `ali/run-ali.sh`.
+Normal `hermes` CLI sessions are now backed by shell hooks in `~/.hermes/config.yaml`.
 
-That wrapper runs `ali/session-sync.sh start` before Hermes launches and `ali/session-sync.sh end` when Hermes exits, so session sync happens by default instead of relying on memory or a cron job.
+Those hooks call the Ali session sync scripts on `on_session_start` and `on_session_finalize`, so sync is baked into Hermes itself rather than relying only on memory or a wrapper.
+
+`ali/run-ali.sh` remains available as an explicit entrypoint and a readable place to inspect the behavior.

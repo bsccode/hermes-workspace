@@ -31,8 +31,9 @@ Preserve one coherent assistant personality while keeping each machine's local m
    - Do not flatten them into one undifferentiated memory blob.
 
 5. Session sync is expected.
-   - On session start, run `~/hermes-workspace/ali/session-sync.sh start`, or just use `~/hermes-workspace/ali/run-ali.sh`.
-   - On session end, run `~/hermes-workspace/ali/session-sync.sh end` if the wrapper was not used.
+   - Hermes now has baked-in shell hooks in `~/.hermes/config.yaml` for `on_session_start` and `on_session_finalize`.
+   - Those hooks call the Ali sync scripts automatically during normal `hermes` CLI sessions.
+   - `~/hermes-workspace/ali/run-ali.sh` remains a valid explicit wrapper, but is no longer the only enforcement path.
    - Pull only with fast-forward safety.
    - Dirty unfinished work should checkpoint to `wip/<node>`, not `main`.
 
